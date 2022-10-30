@@ -1,0 +1,43 @@
+﻿Document: DTO
+Name: Register
+Fields:
+    - Field:
+        Name: User
+        Type: string
+        Clean: basic
+        Required: Yes
+        IsLength: 200
+        Validations:
+            - VT: isEmail
+              Message: "The user must be a valid email."
+     - Field:
+        Name: Names
+        Type: string
+        Clean: basic
+        Required: Yes
+        IsLength: 50
+        Validations: []
+    - Field:
+        Name: LastNames
+        Type: string
+        Clean: basic
+        Required: Yes
+        IsLength: 50
+        Validations: []
+    - Field:
+        Name: Password
+        Type: string
+        Clean: none
+        Required: Yes
+        IsLength: 50
+        Validations: []
+   - Field:
+        Name: ConfirmPassword
+        Type: string
+        Clean: none
+        Required: Yes
+        IsLength: 50
+        Validations:
+            - VT: IsEqualTo
+              EqualField: Password
+              Message: "The passwords don't match.'"

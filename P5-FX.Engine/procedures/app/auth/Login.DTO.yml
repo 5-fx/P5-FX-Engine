@@ -1,0 +1,17 @@
+Document: DTO
+Name: Login
+Fields:
+    - Field:
+        Name: User
+        Type: string
+        Clean: Basic
+        Required: Yes
+        IsLength: 200
+        Validations: []
+    - Field:
+        Name: Password
+        Type: string
+        Clean: None
+        Required: Yes
+        IsLength: 50
+        Validations: []
